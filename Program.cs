@@ -5,6 +5,19 @@ using System.Collections.Generic;
 
 namespace Mod4
 {
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            SimpleDataBase<int> data = new SimpleDataBase<int>();
+            data.AddNewData(13);
+            data.AddNewData(02);
+            data.AddNewData(20);
+
+            data.PrintAllData();
+
+        }
+    }
     class SimpleDataBase<T>
     {
         private List<T> storedData;
