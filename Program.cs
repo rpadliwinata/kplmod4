@@ -9,6 +9,10 @@ namespace Mod4
     {
         static void Main(String[] args)
         {
+
+            int hasil = Penjumlahan.JumlahTigaAngka<int>(13, 02, 20);
+            Console.WriteLine(hasil);
+
             SimpleDataBase<int> data = new SimpleDataBase<int>();
             data.AddNewData(13);
             data.AddNewData(02);
@@ -41,6 +45,18 @@ namespace Mod4
             {
                 Console.WriteLine("Data " + (i+1) + " berisi: " + storedData[i].ToString() +  ", yang disimpan pada waktu " + inputDates[i]);
             }
+        }
+    }
+
+    class Penjumlahan
+    {
+        public static T JumlahTigaAngka<T>(T a, T b, T c)
+        {
+            dynamic tempA = a;
+            dynamic tempB = b;
+            dynamic tempC = c;
+
+            return tempA + tempB + tempC;
         }
     }
 }
